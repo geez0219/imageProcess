@@ -80,6 +80,7 @@ int main(void){
 	//a.encodeHuff("testEncode.txt", "tree.csv");
 	//Pic aDecode = Pic::decodeHuff("testEncode.txt", "tree.csv", sizeY, sizeX, sizeZ);
 	//aDecode.output("afterDecode.raw");
+
 //	POINT_2D corner1(0,0);
 //	POINT_2D corner2(300,100);
 //	POINT_2D corner3(400,500);

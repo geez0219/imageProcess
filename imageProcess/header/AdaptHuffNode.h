@@ -7,9 +7,9 @@ using namespace std;
 
 struct AdaptHuffNode{
 	static bool showUpTable[257];
-	static AdaptHuffNode* nodeSearch; // for function searchNode and searchSwitch 
-	static long codeSearch; // for function searchNode 
-	static int codeLenSearch; // for function searchNode 
+	static AdaptHuffNode* nodeSearch; // for function searchNode and searchSwitch
+	static long codeSearch; // for function searchNode
+	static int codeLenSearch; // for function searchNode
 	static int highestOrder; // for function searchSwitch
 	int symbol;
 	int weight;
@@ -19,7 +19,6 @@ struct AdaptHuffNode{
 	AdaptHuffNode *upNode;
 	AdaptHuffNode();
 	AdaptHuffNode(int Symbol, int Weight, int Order, AdaptHuffNode* LeftNode, AdaptHuffNode* RightNode, AdaptHuffNode* UpNode);
-
 	void searchNode(AdaptHuffNode *node, int symbol, long code, int codeLen);
 	pair<long, int> encode(int codeIn);
 	void printTree(void);

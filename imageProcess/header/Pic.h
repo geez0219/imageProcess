@@ -16,38 +16,38 @@ private:
 		
 public:
 	Pic();
-	Pic(int, int, int);
-	Pic(string, int, int, int);
+	Pic(int SizeY, int SizeX, int SizeZ);
+	Pic(string filename, int SizeY, int SizeX, int SizeZ);
 	~Pic();
 	int getX();
 	int getY();
 	int getZ();
-	void setPixelValue(int, int, int, unsigned char);
+	void setPixelValue(int y, int x, int z, unsigned char value);
 	int getColorSpace();
 	void free();
-	void output(string);
+	void output(string filename);
 	void print();
-	void resize(int, int);
+	void resize(int newX, int newY);
 	void RGBToCMY();
 	void RGBToHSL();
 	void CMYToRGB();
 	void HSLToRGB();
-	Pic& expandEdge(int, int mode=0);
-	Pic& crop(int, int, int, int);
-	Pic& crop(Point_2D&, int, int);
-	void crop(Pic&, int, int, int, int);
-	void crop(Pic&, Point_2D&, int, int);
+	Pic& expandEdge(int pixel_num, int mode=0);
+	Pic& crop(int y_corner, int x_corner, int lengthY, int lengthX);
+	Pic& crop(Point_2D& pt, int lengthY, int lengthX);
+	void crop(Pic& output, int y_corner, int x_corner, int lengthY, int lengthX);
+	void crop(Pic& output, Point_2D& pt, int lengthY, int lengthX);
 	void histEqualize();
-	Pic& NLM(Filter&, int, float);
-	unsigned char bilinear(float, float, int);
-	Pic& homoTransform(Point_2D&, Point_2D&, Point_2D&, Point_2D&);
-	void encodeFano(string filenameOut, string treeFilename = "tree.csv");
+	Pic& NLM(Filter& kernel, int searchSize, float h);
+	unsigned char bilinear(float y, float x, int z);
+	Pic& homoTransform(Point_2D& corner1_new, Point_2D& corner2_new, Point_2D& corner3_new, Point_2D& corner4_new);
+	void encodeFano(string filenameOut, string treeFilename="tree.csv");
 	static Pic& decodeFano(string filename, string treeFilename, int SizeY, int SizeX, int SizeZ);
 	void encodeHuff(string filenameOut, string treeFilename = "tree.csv");
 	static Pic& decodeHuff(string filename, string treeFilename, int SizeY, int SizeX, int SizeZ);
 	void encodeAdaptHuff(string filenameOut);
 	static Pic& decodeAdaptHuff(string filename, int SizeY, int SizeX, int SizeZ);
-friend float getDistance(Pic&, Pic&, Filter&, float);
+friend float getDistance(Pic &picA, Pic &picB, Filter &kernel, float weightSum);
 };
 
 #endif

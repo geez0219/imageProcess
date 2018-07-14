@@ -9,10 +9,10 @@
 #pragma warning(disable : 4996) 
 using namespace std;
 
-FanoNode::FanoNode(vector<pair<int, float> > a, int b, int c){
-		list = a; // the list of symbol and its probability pair
-		code = b; // the code value
-		codeBit = c; // the code length
+FanoNode::FanoNode(vector<pair<int, float> > List, int Code, int CodeBit){
+		list = List; // the list of symbol and its probability pair
+		code = Code; // the code value
+		codeBit = CodeBit; // the code length
 		leftNode = NULL;
 		rightNode = NULL;
 }

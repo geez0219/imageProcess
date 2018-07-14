@@ -15,15 +15,15 @@ struct FanoNode{
 	FanoNode *rightNode;
 	FanoNode *upNode;
 	FanoNode();
-	FanoNode(vector<pair<int, float> > , int , int );
+	FanoNode(vector<pair<int, float> > List, int Code, int CodeBit);
 	void treeBuild();
-	void outputTree(const char*);
+	void outputTree(const char* filenameOut);
 	static void clearCodeTable(); 
-	static void encodeFile(const char*, const char*); 
-	static void decodeFile(FanoNode* , const char*, const char*);
-	static void encodePic(unsigned char***, int, int, int, const char*);
+	static void encodeFile(const char *filenameIn, const char *filenameOut);
+	static void decodeFile(FanoNode *rootp, const char *filenameIn, const char *filenameOut);
+	static void encodePic(unsigned char*** pic, int sizeY, int sizeX, int sizeZ, const char *filenameOut);
 	static void decodeFileToVec(FanoNode* rootp, const char* filenameIn, vector<unsigned char>& outputVec);
-	static FanoNode* buildTreeCSV(const char*);
+	static FanoNode* buildTreeCSV(const char* filenameIn);
 	static void printCodeTable();
 };
 #endif

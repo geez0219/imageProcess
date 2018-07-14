@@ -15,21 +15,20 @@ private:
 		
 public:
 	Filter();
-	Filter(int, int, int);
-	Filter(string, int, int, int);
+	Filter(int SizeY, int SizeX, int SizeZ);
+	Filter(string filename, int SizeY, int SizeX, int SizeZ);
 	~Filter();
 	int getX();
 	int getY();
 	int getZ();
 	float getSum();
-	void setPixelValue(int, int, int, float);
+	void setPixelValue(int y, int x, int z, float value);
 	void free();
-	void output(string);
+	void output(string filename);
 	void print();
-	static Filter& makeFilter_gauss(int, int, int, float);
+	static Filter& makeFilter_gauss(int SizeY, int SizeX, int SizeZ, float var);
 	
-		
-friend float getDistance(Pic&, Pic&, Filter&, float);
+friend float getDistance(Pic &picA, Pic &picB, Filter &kernel, float weightSum);
 };
 
 #endif 
