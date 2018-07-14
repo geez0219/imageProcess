@@ -98,6 +98,7 @@ int main(void){
 
 //	POINT_2D a(1,5);
 //	cout << a.getY() << " " << a.getX() << endl; 
+	// test sync
 	system("pause");
 	return 0;
 }
