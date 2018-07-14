@@ -76,9 +76,6 @@ int main(void){
 	c.encodeFano("testEncodeC.txt", "treeC.csv");
 	Pic cDecode = Pic::decodeFano("testEncodeC.txt", "treeC.csv", sizeY, sizeX, sizeZ);
 	cDecode.output("afterDecodeC.raw");
-	// test github sync
-
-
 	//Pic a(fileNameIn, sizeY, sizeX, sizeZ);
 	//a.encodeHuff("testEncode.txt", "tree.csv");
 	//Pic aDecode = Pic::decodeHuff("testEncode.txt", "tree.csv", sizeY, sizeX, sizeZ);
@@ -100,7 +97,6 @@ int main(void){
 
 //	POINT_2D a(1,5);
 //	cout << a.getY() << " " << a.getX() << endl; 
-	// test sync
 	system("pause");
 	return 0;
 }
