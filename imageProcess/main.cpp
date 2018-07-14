@@ -76,6 +76,8 @@ int main(void){
 	c.encodeFano("testEncodeC.txt", "treeC.csv");
 	Pic cDecode = Pic::decodeFano("testEncodeC.txt", "treeC.csv", sizeY, sizeX, sizeZ);
 	cDecode.output("afterDecodeC.raw");
+	// test github sync
+
 
 	//Pic a(fileNameIn, sizeY, sizeX, sizeZ);
 	//a.encodeHuff("testEncode.txt", "tree.csv");
