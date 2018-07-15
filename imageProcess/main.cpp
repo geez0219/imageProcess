@@ -47,35 +47,36 @@ int main(void){
 	//AdaptHuffNode::encodeFile("text.dat", "testEncode.txt");
 	//AdaptHuffNode::decodeFile("testEncode.txt", "testDecode.dat");
 
+
 	////////////////////////////////////////////////////////////////////////////
-	string fileNameIn;
-	int sizeX;
-	int sizeY;
-	int sizeZ;
-	int newSizeX;
-	int newSizeY;
-	cout << "please enter the filename: ";
-	cin >> fileNameIn;
-	cout << "please enter the sizeX: ";
-	cin >> sizeX;
-	cout << "please enter the sizeY: ";
-	cin >> sizeY;
-	cout << "please enter the sizeZ: ";
-	cin >> sizeZ;
-	Pic a(fileNameIn,sizeY,sizeX,sizeZ);
-	a.encodeAdaptHuff("testEncode.txt");
-	Pic aDecode = Pic::decodeAdaptHuff("testEncode.txt", sizeY, sizeX, sizeZ);
-	aDecode.output("afterDecode.raw");
+	//string fileNameIn;
+	//int sizeX;
+	//int sizeY;
+	//int sizeZ;
+	//int newSizeX;
+	//int newSizeY;
+	//cout << "please enter the filename: ";
+	//cin >> fileNameIn;
+	//cout << "please enter the sizeX: ";
+	//cin >> sizeX;
+	//cout << "please enter the sizeY: ";
+	//cin >> sizeY;
+	//cout << "please enter the sizeZ: ";
+	//cin >> sizeZ;
+	//Pic a(fileNameIn,sizeY,sizeX,sizeZ);
+	//a.encodeAdaptHuff("testEncode.txt");
+	//Pic aDecode = Pic::decodeAdaptHuff("testEncode.txt", sizeY, sizeX, sizeZ);
+	//aDecode.output("afterDecode.raw");
 
-	Pic b(fileNameIn, sizeY, sizeX, sizeZ);
-	b.encodeHuff("testEncodeB.txt", "treeB.csv");
-	Pic bDecode = Pic::decodeHuff("testEncodeB.txt", "treeB.csv", sizeY, sizeX, sizeZ);
-	bDecode.output("afterDecodeB.raw");
+	//Pic b(fileNameIn, sizeY, sizeX, sizeZ);
+	//b.encodeHuff("testEncodeB.txt", "treeB.csv");
+	//Pic bDecode = Pic::decodeHuff("testEncodeB.txt", "treeB.csv", sizeY, sizeX, sizeZ);
+	//bDecode.output("afterDecodeB.raw");
 
-	Pic c(fileNameIn, sizeY, sizeX, sizeZ);
-	c.encodeFano("testEncodeC.txt", "treeC.csv");
-	Pic cDecode = Pic::decodeFano("testEncodeC.txt", "treeC.csv", sizeY, sizeX, sizeZ);
-	cDecode.output("afterDecodeC.raw");
+	//Pic c(fileNameIn, sizeY, sizeX, sizeZ);
+	//c.encodeFano("testEncodeC.txt", "treeC.csv");
+	//Pic cDecode = Pic::decodeFano("testEncodeC.txt", "treeC.csv", sizeY, sizeX, sizeZ);
+	//cDecode.output("afterDecodeC.raw");
 	//Pic a(fileNameIn, sizeY, sizeX, sizeZ);
 	//a.encodeHuff("testEncode.txt", "tree.csv");
 	//Pic aDecode = Pic::decodeHuff("testEncode.txt", "tree.csv", sizeY, sizeX, sizeZ);

@@ -17,6 +17,6 @@ double** getTransformMat(Point_2D& Corner1A, Point_2D& Corner1B, Point_2D& Corne
 	Point_2D& Corner2B, Point_2D& Corner3A, Point_2D& Corner3B, Point_2D& Corner4A, Point_2D& Corner4B);
 int isInRegion(Point_2D& corner1, Point_2D& corner2, Point_2D& corner3, Point_2D& corner4, double y, double x);
 bool comparePairList(const pair<unsigned char, float> &a, const pair<unsigned char, float> &b);
-//FILTER getTransferMatrix()
-
+string addRecomFileExtension(const string& filename, const string& recomExt);
+string getFileExtension(const string& filename);
 #endif

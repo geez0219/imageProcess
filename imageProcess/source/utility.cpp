@@ -233,3 +233,31 @@ bool comparePairList(const pair<unsigned char,float> &a,const pair<unsigned char
        return a.second > b.second;
 }
 
+string addRecomFileExtension(const string& filename, const string& recomExt) {
+	/*
+	the function will check the filename extension and return the filename with recommend extension
+	ex:  addRecomFileExtension("test.txt", "txt") >> "test.txt"
+	     addRecomFileExtension("test", "txt") >> "test.txt"
+	     addRecomFileExtension("test.csv", "txt") >> "test.csv.txt"
+	*/
+	int end, start = 0;
+	while (true) {
+		end = filename.find(".", start);
+		if (end == string::npos) break;
+		start = end + 1;
+	}
+	if (start == 0) return filename + "." + recomExt;
+
+	if (filename.substr(start, string::npos) == recomExt) return string(filename);
+	return filename + "." + recomExt;
+}
+
+string getFileExtension(const string& filename) {
+	int end, start = 0;
+	while (true) {
+		end = filename.find(".", start);
+		if (end == string::npos) break;
+		start = end + 1;
+	}
+	return filename.substr(start, string::npos);
+}

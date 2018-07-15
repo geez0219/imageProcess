@@ -706,3 +706,29 @@ Pic& Pic::decodeAdaptHuff(string filename, int SizeY, int SizeX, int SizeZ) {
 	cout << " Adaptive Huffman decoding to Pic object is done" << endl;
 	return *output;
 }
+
+//void Pic::encodeFano2(const string& filenameOut) {
+//	int buff[257] = {};
+//	// get the probability 
+//	for (int y = 0; y<sizeY; y++) {
+//		for (int x = 0; x<sizeX; x++) {
+//			for (int z = 0; z<sizeZ; z++) {
+//				buff[pixel[y][x][z]] ++;
+//			}
+//		}
+//	}
+//	buff[256] ++; // add EOF
+//	vector<pair<int, float> > pairList;
+//	for (int i = 0; i<257; i++) {
+//		if (buff[i] != 0) {
+//			pairList.push_back(make_pair(i, buff[i])); // don't need to transform to probability
+//		}
+//	}
+//	sort(pairList.begin(), pairList.end(), comparePairList); // sorted according to occurence	
+//	FanoNode FanoRoot(pairList, 0, 0);
+//	FanoNode::clearCodeTable();
+//	FanoRoot.treeBuild();
+//
+//	// output the tree to output file
+//	// encode picture
+//}
