@@ -1,6 +1,7 @@
 #ifndef PIC_H
 #define PIC_H
 #include <string>
+#include "utility.h"
 class Filter;
 class Point_2D; 
 
