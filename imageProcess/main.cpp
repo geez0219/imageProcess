@@ -132,6 +132,12 @@ int main(void){
 	//a.histEqualize();
 	//a.output(fileNameOut);
 
+	/////// resize ////////
+	//Pic a(fileNameIn, sizey, sizex, sizez);
+	//int newY = 200, newX = 200;
+	//a.resize(newY, newX);
+	//a.output(fileNameOut);
+
 	/////// NLM denoise ///////
 	//Pic a(fileNameIn, sizey, sizex, sizez);
 	//Pic b;
